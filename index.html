@@ -4,8 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .calculetor {
+        background-color: aquamarine;
+        width: 350px;
+        margin: auto;
+        padding: 15px;
+      }
+      .display {
+        margin-bottom: 15px;
+      }
+      .display h1 {
+        background-color: gold;
+        font-size: 40px;
+        text-align: right;
+        padding: 5px 0;
+      }
+      .numberBox {
+        background-color: forestgreen;
+        display: grid;
+        grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+      }
+      #inp0 {
+        grid-column: span 2;
+        width: 100%;
+      }
+      .numberBox p {
+        background-color: rebeccapurple;
+        color: white;
+        /* height: 35px;
+        width: 35px; */
+        text-align: center;
+        padding: 15px;
+      }
+    </style>
   </head>
   <body>
-    <h1>holloff</h1>
+    <div class="main">
+      <h1>Calculator</h1>
+      <div class="calculetor">
+        <div class="display">
+          <h1 id="display">56535476378</h1>
+        </div>
+        <div class="numberBox">
+          <p id="inpC">C</p>
+          <p id="inpD">D</p>
+          <p id="inp%">%</p>
+          <p id="inp/">/</p>
+          <p id="inp7">7</p>
+          <p id="inp8">8</p>
+          <p id="inp9">9</p>
+          <p id="inp*">*</p>
+          <p id="inp4">4</p>
+          <p id="inp5">5</p>
+          <p id="inp6">6</p>
+          <p id="inp-">-</p>
+          <p id="inp1">1</p>
+          <p id="inp2">2</p>
+          <p id="inp3">3</p>
+          <p id="inp+">+</p>
+          <p id="inp0">0</p>
+          <p id="inp.">.</p>
+          <p id="inp=">=</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
