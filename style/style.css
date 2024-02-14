@@ -91,21 +91,16 @@ body {
   border-radius: 50px;
   box-shadow: 4px 2px 2px gray;
 }
-#inpPersent,
-#inpDivide,
-#inpMultiply,
-#inpNeg,
-#inpPsitive,
-#inpEqual {
-  color: tomato;
+.numberBox .tometo {
+  color: rgb(248, 4, 199);
 }
 .numberBox button:active {
   background: rgb(176, 187, 231);
   color: white;
 }
-.numberBox #inpC:focus,
-.numberBox #inpEqual:focus {
-  box-shadow: inset 0px 0px 0px 2px tomato;
+
+.numberBox .inpEqual:focus {
+  box-shadow: inset 0px 0px 0px 2px rgb(248, 4, 199);
   background-color: rgb(176, 187, 231);
   color: white;
 }
