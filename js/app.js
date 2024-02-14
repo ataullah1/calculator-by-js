@@ -1,34 +1,31 @@
-console.log('Hello world');
-
-function numToDis(idCal) {
-  document.getElementById(idCal).addEventListener('click', function (e) {
-    const value = e.target.innerText;
-    const display = document.getElementById('display');
-    display.textContent += value;
-  });
+function keyFunc(e) {
+  const display = document.getElementById('display');
+  display.innerText += e;
 }
-document.getElementById('inpC').addEventListener('click', function () {
+
+function keyFuncClear() {
   const display = document.getElementById('display');
-  display.innerHTML = '';
-});
-document.getElementById('inpD').addEventListener('click', function () {
+  display.innerText = '';
+}
+
+function keyFuncDelete() {
   const display = document.getElementById('display');
-  display.innerHTML;
-});
-numToDis('inp1');
-numToDis('inp2');
-numToDis('inp3');
-numToDis('inp4');
-numToDis('inp5');
-numToDis('inp6');
-numToDis('inp7');
-numToDis('inp8');
-numToDis('inp9');
-numToDis('inp0');
-numToDis('inpSum');
-numToDis('inpNeg');
-numToDis('inpMul');
-numToDis('inpDiv');
-numToDis('inpPer');
-numToDis('inpPoint');
-numToDis('inpEqual');
+  const del = display.innerText.slice(0, -1);
+  display.innerText = del;
+}
+
+function keyFuncCalculet() {
+  const display = document.getElementById('display');
+  const expression = display.innerText;
+
+  try {
+    const result = eval(expression); // Evaluate the expression
+    if (isNaN(result) || !isFinite(result)) {
+      display.innerText = 'Error';
+    } else {
+      display.innerText = result; // Display the result
+    }
+  } catch (error) {
+    display.innerText = 'Error';
+  }
+}
